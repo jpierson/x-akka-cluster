@@ -16,7 +16,11 @@ namespace ClientMember
         static void Main(string[] args)
         {
             ClusterSystem = ActorSystem.Create("testcluster");
+
             var router = ClusterSystem.ActorOf(Props.Empty.WithRouter(FromConfig.Instance), "proxy");
+            //var props = Props.Create<Worker>().WithRouter(new RoundRobinPool(5));
+            //var router = ClusterSystem.ActorOf(props, "worker");
+
             CommandSender = ClusterSystem.ActorOf(Props.Create(() => new CommandSender(router)), "commands");
 
             ClusterSystem.WhenTerminated.Wait();

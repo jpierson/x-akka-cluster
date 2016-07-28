@@ -14,14 +14,15 @@ namespace ClientMember
             Context.System.Scheduler.ScheduleTellRepeatedly(
                 TimeSpan.Zero, 
                 TimeSpan.FromSeconds(2), 
-                router, 
+                this.Self, 
                 new TestCommand(), 
                 this.Self);
         }
 
         protected override void OnReceive(object message)
         {
-            throw new NotImplementedException();
+            Console.WriteLine("sending to service");
+            router.Tell(message);
         }
     }
 }
