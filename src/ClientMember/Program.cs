@@ -17,7 +17,7 @@ namespace ClientMember
         {
             ClusterSystem = ActorSystem.Create("testcluster");
             var router = ClusterSystem.ActorOf(Props.Empty.WithRouter(FromConfig.Instance), "proxy");
-            CommandSender = ClusterSystem.ActorOf(Props.Create(() => new CommandHandler(router)), "commandsender");
+            CommandSender = ClusterSystem.ActorOf(Props.Create(() => new CommandSender(router)), "commands");
 
             ClusterSystem.WhenTerminated.Wait();
         }

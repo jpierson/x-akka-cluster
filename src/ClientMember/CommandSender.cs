@@ -2,7 +2,7 @@
 using Akka.Actor;
 using Messages;
 
-namespace ServiceMember
+namespace ClientMember
 {
     internal class CommandSender : UntypedActor
     {

@@ -17,7 +17,7 @@ namespace ServiceMember
         {
             ClusterSystem = ActorSystem.Create("testcluster");
             var router = ClusterSystem.ActorOf(Props.Create(() => new CommandMaster()), "service");
-            CommandSender = ClusterSystem.ActorOf(Props.Create(() => new CommandSender(router)),"commands");
+            CommandSender = ClusterSystem.ActorOf(Props.Create(() => new CommandHandler(router)), "commandsender");
 
             ClusterSystem.WhenTerminated.Wait();
         }
