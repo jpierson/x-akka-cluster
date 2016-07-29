@@ -83,7 +83,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CommandHandler.cs" />
     <Compile Include="CommandMaster.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -93,6 +92,10 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\KevinBaconActors\KevinBaconActors.csproj">
+      <Project>{c72b8f12-e30e-462b-9f01-533513434dfc}</Project>
+      <Name>KevinBaconActors</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Messages\Messages.csproj">
       <Project>{E139A521-FE54-4349-B0E8-DE6711767AC5}</Project>
       <Name>Messages</Name>

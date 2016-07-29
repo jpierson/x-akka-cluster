@@ -13,7 +13,7 @@ namespace ClientMember
             this.router = router;
             Context.System.Scheduler.ScheduleTellRepeatedly(
                 TimeSpan.Zero, 
-                TimeSpan.FromSeconds(2), 
+                TimeSpan.FromSeconds(1), 
                 this.Self, 
                 new TestCommand(), 
                 this.Self);
