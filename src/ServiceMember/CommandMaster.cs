@@ -13,7 +13,7 @@ namespace ServiceMember
 
         protected override void OnReceive(object message)
         {
-            Console.WriteLine($"Yay! {message.ToString()} recieved by CommandMaster actor {_id}");
+            //Console.WriteLine($"Yay! {message.ToString()} recieved by CommandMaster actor {_id}");
         }
     }
 }
