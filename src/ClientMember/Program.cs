@@ -22,15 +22,16 @@ namespace ClientMember
             //var props = Props.Create<ServiceMember.CommandHandler>().WithRouter(new RoundRobinPool(5));
             ////var props = Props.Create<ClientActorWithRouter>().WithRouter(new RoundRobinPool(5));
             //var router = ClusterSystem.ActorOf(props, "proxy");
-
-            var router = ClusterSystem.ActorOf(Props.Create<ServiceMember.CommandHandler>().WithRouter(
+            
+            //var router = ClusterSystem.ActorOf(Props.Create<ServiceMember.CommandHandler>().WithRouter(
+            var router = ClusterSystem.ActorOf(Props.Create(() => new ServiceMember.CommandHandler()).WithRouter(
                      new ClusterRouterPool(
                          new RoundRobinPool(1),
                          new ClusterRouterPoolSettings(
                              4, 
+                             2,
                              false,
-                             "service",
-                             2))));
+                             "service"))));
 
 
             CommandSender = ClusterSystem.ActorOf(Props.Create(() => new CommandSender(router)), "commands");
