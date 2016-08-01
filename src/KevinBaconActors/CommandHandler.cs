@@ -12,9 +12,9 @@ namespace ServiceMember
         {
         }
 
-        protected override void OnReceive(object message)
+        protected override void OnReceive(dynamic message)
         {
-            Console.WriteLine($"Yay! {message.ToString()} recieved by CommandHandler actor {_id}");
+            Console.WriteLine($"Group: {message.Group}, Sequence: {message.Sequence}");
         }
     }
 }
