@@ -6,15 +6,15 @@ namespace ServiceMember
 {
     public class CommandHandler : UntypedActor
     {
-        private Guid _id = Guid.NewGuid();
-
+        private int counter = 0;
         public CommandHandler()
         {
         }
 
         protected override void OnReceive(dynamic message)
         {
-            Console.WriteLine($"Group: {message.Group}, Sequence: {message.Sequence}");
+            counter++;
+            Console.WriteLine($"Group: {message.Group}, Sequence: {message.Sequence}  MessageCount: {counter}");
         }
     }
 }

@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lighthouse", "Lighthouse\Li
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KevinBaconActors", "KevinBaconActors\KevinBaconActors.csproj", "{C72B8F12-E30E-462B-9F01-533513434DFC}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MessageSender", "MessageSender\MessageSender.csproj", "{C4C0AF71-E3CA-43DA-84ED-B9B3417B0FE4}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{C72B8F12-E30E-462B-9F01-533513434DFC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C72B8F12-E30E-462B-9F01-533513434DFC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C72B8F12-E30E-462B-9F01-533513434DFC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C4C0AF71-E3CA-43DA-84ED-B9B3417B0FE4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C4C0AF71-E3CA-43DA-84ED-B9B3417B0FE4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C4C0AF71-E3CA-43DA-84ED-B9B3417B0FE4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C4C0AF71-E3CA-43DA-84ED-B9B3417B0FE4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
